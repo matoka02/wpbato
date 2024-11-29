@@ -1,0 +1,45 @@
+@use '../base/mixins';
+@use '../utils/variables' as variables;
+
+// 0px - 413px
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+   background-color: variables.$via-magenta;
+}
+
+// 414px - 767px
+@media screen and (min-width: 414px) {
+  .container {
+    max-width: 414px;
+  }
+}
+
+// 768px - 1279px
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+
+// 1280px - 1439px
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1216px;
+  }
+}
+
+// 1440px +
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1216px;
+    padding: 0 10px;
+  }
+}
+
+// ширина макету - 1440
+// padding з боків - 112
+// чистий макет - 1216
+
+// 2.	Респонсив на свій розсуд, на проміжних значеннях сайт не повинен розвалюватися (перевірити на нестандартних роздільних здатностях більше 1920px) перевірка на найпоширеніших розмірах: 1920, 1660, 1440. 1366, 1280, 1024, 768, 414, 375, 320

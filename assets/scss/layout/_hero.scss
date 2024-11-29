@@ -1,0 +1,82 @@
+$main-gradient: linear-gradient(91deg, rgba(255, 104, 1, 0.80) 0.72%, rgba(255, 32, 1, 0.80) 99.25%);
+$image1x: url("../images/Call_to_Action-1@1x.jpg");
+$image2x: url("../images/Call_to_Action-1@2x.jpg");
+
+// 0px - 767px
+
+.hero {
+  margin: auto;
+
+  background-image: $main-gradient, $image1x;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  padding-top: 96px;
+  padding-bottom: 96px;
+
+  background-color: linear-gradient(to right, $gradient-start, $gradient-end);
+}
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) {
+  .hero {
+    background-image: $main-gradient, $image2x;
+  }
+}
+
+// 768px - 1279px
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: $main-gradient, $image1x;
+    background-size: contain;
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) and (min-width: 768px) {
+  .hero {
+    background-image: $main-gradient, $image2x;
+
+    background-size: contain;
+  }
+}
+
+// 1280px +
+@media screen and (min-width: 1280px) {
+  .hero {
+    max-width: 1440px;
+
+    padding-top: 96px;
+    padding-bottom: 96px;
+
+    background-image: $main-gradient, $image1x;
+
+    // background-size: cover;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+@media (min-device-pixel-ratio: 2),
+(min-resolution: 192dpi),
+(min-resolution: 2dppx) and (min-width: 1200px) {
+  .hero {
+    background-image: $main-gradient, $image2x;
+
+    // background-size: cover;
+    background-size: contain;
+    background-position: center;
+  }
+}
+
+// all size
+.hero__wrapper {
+  padding: 34px 32px 34px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}

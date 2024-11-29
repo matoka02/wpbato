@@ -1,0 +1,78 @@
+@use '../base/mixins';
+@use '../utils/variables' as variables;
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-main {
+  padding: 4.5px 16px;
+  width: 152px;
+
+  border-radius: 15px;
+  border: 1px solid variables.$primary-color-theme;
+
+  @include mixins.font-poppins(600);
+  font-size: 1.400rem;
+  line-height: 3.35;
+  text-align: center;
+  text-transform: capitalize;
+
+  transition: all 0.3s ease;
+
+  & p {
+    background-color: variables.$accent;
+    background-image: linear-gradient(to right, variables.$gradient-start, variables.$gradient-end);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: variables.$accent;
+
+    & p {
+      color: variables.$primary-color-theme;
+
+      background-color: transparent;
+      background-image: none;
+      background-clip: unset;
+      -webkit-background-clip: unset;
+      -webkit-text-fill-color: variables.$primary-color-theme;
+    }
+  }
+}
+
+.btn-contact-form {
+  padding: 21px 0;
+  width: 100%;
+
+  @include mixins.font-poppins(600);
+  font-size: 1.600rem;
+  line-height: 1.12;
+  text-align: center;
+  letter-spacing: 0.5px;
+
+  color: variables.$primary-color-theme;
+
+  border-radius: 4px;
+  border: 1px solid variables.$primary-color-theme;
+  background-color: variables.$accent;
+
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:focus {
+    color: variables.$accent;
+    background-color: variables.$primary-color-theme;
+  }
+
+  &:disabled {
+    background-color: variables.$primary-text-color;
+  }
+}

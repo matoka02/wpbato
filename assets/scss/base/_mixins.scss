@@ -1,0 +1,37 @@
+@use '../utils/fonts';
+
+/*=====FONTS=====*/
+
+@mixin font-poppins($weight: 300) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: $weight;
+}
+@mixin font-poppins($weight: 400) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: $weight;
+}
+@mixin font-poppins($weight: 500) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: $weight;
+}
+@mixin font-poppins($weight: 600) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: $weight;
+}
+@mixin font-poppins($weight: 800) {
+  font-family: 'Poppins', sans-serif;
+  font-weight: $weight;
+}
+
+@mixin font-readexpro($weight: 400) {
+  font-family: 'ReadexPro', sans-serif;
+  font-weight: $weight;
+}
+@mixin font-readexpro($weight: 600) {
+  font-family: 'ReadexPro', sans-serif;
+  font-weight: $weight;
+}
+@mixin font-readexpro($weight: 700) {
+  font-family: 'ReadexPro', sans-serif;
+  font-weight: $weight;
+}

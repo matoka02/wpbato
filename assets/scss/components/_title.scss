@@ -1,0 +1,27 @@
+@use '../base/mixins';
+@use '../utils/variables' as variables;
+
+.title{
+  @include mixins.font-poppins(600);
+  font-size: 3.200rem;
+  line-height: 1.31;
+  color: variables.$black-text-color;
+}
+
+.title__label{
+  padding-top: 6px;
+
+  @include mixins.font-poppins(400);
+  font-size: 1.400rem;
+  color: #999999;
+}
+
+.main-title{
+  max-width: 462px;
+
+  @include mixins.font-poppins(600);
+  font-size: 3.200rem;
+  line-height: 1.37;
+  text-align: center;
+  color: variables.$white-text-color;
+}
