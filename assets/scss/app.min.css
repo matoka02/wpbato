@@ -300,14 +300,16 @@ ________________________________________ */
   color: #333333;
 }
 .header-container .nav__phone {
-  display: flex;
   padding: 13px 20px;
+  display: flex;
+  align-items: center;
   gap: 7px;
   font-family: "ReadexPro", sans-serif;
   font-weight: 700;
   font-size: 1.6rem;
   line-height: normal;
   color: #ffffff;
+  fill: #ffffff;
   border-radius: 100px;
   border: 1px solid #E75624;
   background-color: #E75624;
@@ -315,6 +317,8 @@ ________________________________________ */
 }
 .header-container .nav__phone:hover, .header-container .nav__phone:focus {
   color: #E75624;
+  fill: #E75624;
+  stroke: #E75624;
   border: 1px solid #E75624;
   background-color: #ffffff;
 }

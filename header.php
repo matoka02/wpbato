@@ -42,12 +42,12 @@
 			?>
 
 			<a href="tel:+0596763818" class="nav__phone">
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/phone.svg" alt="number_phone">
+				<svg width="14" height="14">
+					<use href="<?php echo get_template_directory_uri(); ?>/assets/images/sprite.svg#phone"></use>
+				</svg>
 				0596 76 38 18
 			</a>
 		</div>
-
-
 
 	</div>
 </header>

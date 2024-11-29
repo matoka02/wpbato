@@ -58,14 +58,16 @@
 	}
 
 	.nav__phone {
-		display: flex;
 		padding: 13px 20px;
+		display: flex;
+		align-items: center;
 		gap: 7px;
 
 		@include mixins.font-readexpro(700);
 		font-size: 1.600rem;
 		line-height: normal;
 		color: variables.$white-text-color;
+		fill: variables.$white-text-color;
 
 		border-radius: 100px;
 		border: 1px solid variables.$accent;
@@ -75,6 +77,8 @@
 
 		&:hover, &:focus{
 			color: variables.$accent;
+			fill: variables.$accent;
+			stroke: variables.$accent;
 			border: 1px solid variables.$accent;
 			background-color: variables.$white-text-color;
 		}
