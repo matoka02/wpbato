@@ -18,6 +18,7 @@
 <body <?php body_class(); ?>>
 <header  class="page-header">
 	<div class="container  header-container">
+
 		<a href="<?php echo home_url(); ?>" class="logo">
 			<picture>
 				<source srcset="<?php echo get_template_directory_uri(); ?>/assets/images/Logo-AIE1-desktop-@1x.png 1x, <?php echo get_template_directory_uri(); ?>/assets/images/Logo-AIE1-desktop-@2x.png 2x"
@@ -27,7 +28,6 @@
 								type="image/png">
 				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/Logo-AIE1-mobile-@1x.png" alt="logo">
 			</picture>
-<!--			<img src="--><?php //echo get_template_directory_uri(); ?><!--/assets/images/logo.svg" alt="logo">-->
 		</a>
 
 		<div class="navigation">
