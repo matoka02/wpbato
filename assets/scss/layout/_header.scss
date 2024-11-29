@@ -1,32 +1,82 @@
 @use '../base/mixins';
 @use '../utils/variables' as variables;
 
-header{
-	.container{
+.header-container {
+	padding: 0;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+
+	&>.logo {
+		margin: 6px 0 4px 0;
+	}
+
+	@media screen and (min-width: 1280px) {
+		justify-content: flex-start;
+
+		&>.logo {
+			margin-right: 279px;
+		}
+	}
+
+	.navigation {
 		display: flex;
-		justify-content: space-between;
+		flex-direction: row;
+		gap: 40px;
+	}
+
+	& nav{
+		display: flex;
+		flex-direction: row;
+		gap: 40px;
 	}
 
 	#header-menu{
-		display: flex;
-		gap: 35px;
-		list-style: none;
+		display: none;
 
-		li {
-			// all links
-			a{
-				font-family: "Poppins", sans-serif;
-				font-size: 16px;
-				font-style: normal;
-				font-weight: 400;
-				line-height: 20px;
-				text-decoration: none;
-				color: #6b7280;
-				&:hover{
-					color: #be3455;
-					//background-color: grey;
-				}
+		@media screen and (min-width: 1280px) {
+			display: flex;
+			align-items: center;
+			gap: 40px;
+		}
+
+		a {
+			@include mixins.font-readexpro(600);
+			font-size: 1.600rem;
+			line-height: normal;
+
+			color: variables.$accent;
+
+			transition: all 0.3s ease;
+
+			&:hover, &:focus {
+				color: variables.$secondary-text-color;
 			}
+		}
+	}
+
+	.nav__phone {
+		display: flex;
+		padding: 13px 20px;
+		gap: 7px;
+
+		@include mixins.font-readexpro(700);
+		font-size: 1.600rem;
+		line-height: normal;
+		color: variables.$white-text-color;
+
+		border-radius: 100px;
+		border: 1px solid variables.$accent;
+		background-color: variables.$accent;
+
+		transition: all 0.3s ease;
+
+		&:hover, &:focus{
+			color: variables.$accent;
+			border: 1px solid variables.$accent;
+			background-color: variables.$white-text-color;
 		}
 	}
 }
