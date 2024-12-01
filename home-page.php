@@ -7,5 +7,6 @@
 get_header();
 
 get_template_part('template-parts/home-page', 'features');
+get_template_part('template-parts/home-page', 'testimonials');
 
 get_footer();

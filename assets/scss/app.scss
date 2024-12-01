@@ -22,3 +22,9 @@ ________________________________________ */
 
 @use 'layout/header';
 @use 'layout/features';
+@use 'layout/testimonials';
+
+/*_________________________________________
+# Libraries
+________________________________________ */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css');

@@ -1,3 +1,6 @@
+@use '../base/mixins';
+@use '../utils/variables' as variables;
+
 .testimonials__wrapper {
   padding-top: 58px;
   padding-bottom: 60px;
@@ -21,7 +24,7 @@
   display: flex;
   // width: 384px;
 
-  background: linear-gradient(to right, $gradient-start, $gradient-end);
+  background: linear-gradient(to right, variables.$gradient-start, variables.$gradient-end);
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
 }
 
@@ -36,15 +39,15 @@
   align-items: center;
   gap: 24px;
 
-  background: $primary-color-theme;
+  background: variables.$primary-color-theme;
 }
 
 .review__text {
-  @include font-poppins(400);
+  @include mixins.font-poppins(400);
   font-size: 1.400rem;
   line-height: 1.72;
   text-align: center;
-  color: $primary-text-color;
+  color: variables.$primary-text-color;
 }
 
 .review__descr {
@@ -67,14 +70,14 @@
   gap: 10px;
 
   p:first-child {
-    @include font-poppins(600);
+    @include mixins.font-poppins(600);
     font-size: 1.400rem;
     line-height: 1;
-    color: $secondary-text-color;
+    color: variables.$secondary-text-color;
   }
 
   p:last-child {
-    @include font-poppins(300);
+    @include mixins.font-poppins(300);
     font-size: 1rem;
     line-height: 1;
     color: #666666;
@@ -95,7 +98,7 @@
   }
 
   & .swiper-pagination-bullet-active {
-    background: linear-gradient(to right, $gradient-start, $gradient-end);
+    background: linear-gradient(to right, variables.$gradient-start, variables.$gradient-end);
     transform: scale(1.5);
   }
 }
