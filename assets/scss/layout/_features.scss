@@ -1,3 +1,6 @@
+@use '../base/mixins';
+@use '../utils/variables' as variables;
+
 .features__wrapper {
   padding-top: 58px;
   padding-bottom: 58px;
@@ -57,10 +60,10 @@
   }
 
   p:first-child{
-    @include font-poppins(600);
+    @include mixins.font-poppins(600);
     font-size: 1.600rem;
     line-height: normal;
-    color: $black-text-color;
+    color: variables.$black-text-color;
 
     @media screen and (min-width: 768px) and (max-width: 1279px){
       display: block;
@@ -71,9 +74,9 @@
   p:last-child{
     padding-top: 12px;
 
-    @include font-poppins(400);
+    @include mixins.font-poppins(400);
     font-size: 1.400rem;
     line-height: 1.72;
-    color: $primary-text-color;
+    color: variables.$primary-text-color;
   }
 }
