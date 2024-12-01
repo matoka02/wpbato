@@ -67,7 +67,8 @@
 		font-size: 1.600rem;
 		line-height: normal;
 		color: variables.$white-text-color;
-		fill: variables.$white-text-color;
+		// fill: variables.$white-text-color;
+		stroke: variables.$white-text-color;
 
 		border-radius: 100px;
 		border: 1px solid variables.$accent;
