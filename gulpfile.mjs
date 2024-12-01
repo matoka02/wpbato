@@ -15,7 +15,7 @@ import concat from 'gulp-concat';
 import merge from 'merge2';
 
 // Importing specific gulp API functions lets us write them below as series() instead of gulp.series()
-const {src, dest, watch, series, parallel} = gulp;
+const { src, dest, watch, series, parallel } = gulp;
 
 // Setting up Sass (connecting Dart Sass)
 // sass.compiler = require('sass');
@@ -23,65 +23,65 @@ const sass = gulpSass(dartSass);
 
 const
   jsWatch = [
-      './assets/js/app.js'
+    './assets/js/app.js'
   ],
   jsFiles = [
-      './assets/js/app.js',
-      './assets/js/*.js',
-      '!./assets/js/*.min.js',
+    './assets/js/app.js',
+    './assets/js/*.js',
+    '!./assets/js/*.min.js',
   ],
   cssWatch = [
-      './assets/scss/*.scss',
-      './assets/scss/layout/*.scss',
-      './assets/scss/admin_menu/*.scss',
+    './assets/scss/*.scss',
+    './assets/scss/layout/*.scss',
+    './assets/scss/admin_menu/*.scss',
   ],
   cssFiles = [
-      './assets/scss/app.scss',
+    './assets/scss/app.scss',
   ];
 
 // Sass task: compiles the style.scss file into style.css
 function scssTask() {
 
-    const cssBackFiles = src(cssFiles, {base: './'})
-      .pipe(autoPrefixer({
-          cascade: false
-      }))
-      .pipe(plumber())
-      .pipe(sourcemaps.init())
-      .pipe(sass({
-          outputStyle: 'compressed'
-      }))
-      .pipe(concat('app.min.css'))
-      .pipe(sourcemaps.write('.'))
-      .pipe(dest('./assets/scss/'));
+  const cssBackFiles = src(cssFiles, { base: './' })
+    .pipe(autoPrefixer({
+      cascade: false
+    }))
+    .pipe(plumber())
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }))
+    .pipe(concat('app.min.css'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(dest('./assets/scss/'));
 
-    return merge(cssBackFiles);
+  return merge(cssBackFiles);
 
 }
 
 // JS Task: minify scripts
 function jsTask() {
-    const jsBackFiles = src(jsFiles, {base: './'})
-      .pipe(babel({
-          presets: [
-              ['@babel/env', {
-                  modules: 'commonjs'
-              }]
-          ]
-      }))
-      // .pipe(minifyjs())
-      .pipe(minifyjs.default())
-      .pipe(concat('app.min.js'))
-      .pipe(dest('./assets/js/'));
+  const jsBackFiles = src(jsFiles, { base: './' })
+    .pipe(babel({
+      presets: [
+        ['@babel/env', {
+          modules: 'commonjs'
+        }]
+      ]
+    }))
+    // .pipe(minifyjs())
+    .pipe(minifyjs.default())
+    .pipe(concat('app.min.js'))
+    .pipe(dest('./assets/js/'));
 
-    return merge(jsBackFiles);
+  return merge(jsBackFiles);
 
 }
 
 // Watch task: watch SCSS and JS files for changes
 // If any change, run scss and js tasks simultaneously
 function watchTask() {
-    watch([...cssWatch, ...jsWatch], series(parallel(scssTask, jsTask)));
+  watch([...cssWatch, ...jsWatch], series(parallel(scssTask, jsTask)));
 }
 
 // Export the default Gulp task, so it can be run
