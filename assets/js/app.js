@@ -9,6 +9,8 @@
         setupStarterFunction() {
 
             /* Do something here */
+            console.log('hello world');
+            
 
         } // setupStarterFunction
 

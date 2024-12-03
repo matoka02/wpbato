@@ -18,7 +18,7 @@
     "@babel/preset-env": "^7.18.2"
   },
   "devDependencies": {
-    "cssnano": "^5.1.11",
+    "cssnano": "^7.0.6",
     "gulp": "^5.0.0",
     "gulp-autoprefixer": "^9.0.0",
     "gulp-babel": "^8.0.0",
@@ -30,7 +30,7 @@
     "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify-es": "^3.0.0",
     "merge2": "^1.4.1",
-    "sass": "^1.52.3"
+    "sass": "^1.81.1"
   },
   "author": "Orlovskyi Oleksandr (empat.dev)",
   "license": "ISC",
